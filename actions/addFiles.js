@@ -1,6 +1,7 @@
 const { execSync } = require("child_process");
 
 const addFiles = (files, all = false) => {
+	// include logic for commit all
 	if (all) {
 		execSync(`git add .`);
 		return;

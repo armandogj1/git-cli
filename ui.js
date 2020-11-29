@@ -15,12 +15,13 @@ const App = ({ name = "Stranger", all = false }) => {
 	const [isSubmitted, setSubmitted] = useState(false);
 	const { exit } = useApp();
 
-	// console.log("this is all", all);
+	// handle --all flag
 	if (all) {
 		addFiles(null, true);
 		exit();
 	}
 
+	// get files on first render
 	useEffect(() => {
 		let fileList = getStatus();
 		fileList = fileList.map((file) => [file, false]);
@@ -28,6 +29,7 @@ const App = ({ name = "Stranger", all = false }) => {
 		setFiles(fileList);
 	}, []);
 
+	// listen to user input
 	useInput((input, key) => {
 		if (input === "q") {
 			exit();
@@ -52,6 +54,7 @@ const App = ({ name = "Stranger", all = false }) => {
 		}
 	});
 
+	// new state generator
 	const handleChoice = (idx) => {
 		const toggledFile = files[idx].slice();
 		toggledFile[1] = !toggledFile[1];
