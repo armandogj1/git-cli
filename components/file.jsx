@@ -5,6 +5,7 @@ const { Text, Newline, Box, useFocus } = require("ink");
 const File = ({ file, idx, setFocused }) => {
 	const { isFocused } = useFocus();
 
+	// set app state to current focused index
 	if (isFocused) {
 		setFocused(idx);
 	}
