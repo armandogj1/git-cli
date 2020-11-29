@@ -5,6 +5,7 @@ const { useEffect, useState } = require("react");
 const { Text, Box, useApp, useInput } = require("ink");
 const FileList = importJsx("./components/fileList.jsx");
 const Submit = importJsx("./components/submit.jsx");
+const colors = require("./styles.json");
 
 const getStatus = require("./actions/getStatus");
 const addFiles = require("./actions/addFiles");
@@ -67,13 +68,17 @@ const App = ({ name = "Stranger", all = false }) => {
 
 	return (
 		<Box flexDirection="column">
-			<Box justifyContent="center" borderStyle="double">
-				<Text>Select Files to Add</Text>
+			<Box
+				justifyContent="center"
+				borderStyle="double"
+				borderColor={colors.orange}
+			>
+				<Text color={colors.orange}>Select Files to Add</Text>
 			</Box>
 			<FileList files={files} setFocused={setFocused} />
 			<Submit setFocused={setFocused} />
 			{isSubmitted && (
-				<Text backgroundColor="blue" bold>
+				<Text backgroundColor={colors.blue} bold>
 					Files Added
 				</Text>
 			)}
