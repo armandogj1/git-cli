@@ -9,11 +9,17 @@ const Submit = importJsx("./components/submit.jsx");
 const getStatus = require("./actions/getStatus");
 const addFiles = require("./actions/addFiles");
 
-const App = ({ name = "Stranger" }) => {
+const App = ({ name = "Stranger", all = false }) => {
 	const [files, setFiles] = useState([]);
 	const [focused, setFocused] = useState(null);
 	const [isSubmitted, setSubmitted] = useState(false);
 	const { exit } = useApp();
+
+	// console.log("this is all", all);
+	if (all) {
+		addFiles(null, true);
+		exit();
+	}
 
 	useEffect(() => {
 		let fileList = getStatus();
