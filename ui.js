@@ -12,6 +12,7 @@ const addFiles = require("./actions/addFiles");
 const App = ({ name = "Stranger" }) => {
 	const [files, setFiles] = useState([]);
 	const [focused, setFocused] = useState(null);
+	const [isSubmitted, setSubmitted] = useState(false);
 	const { exit } = useApp();
 
 	useEffect(() => {
@@ -33,8 +34,9 @@ const App = ({ name = "Stranger" }) => {
 					submittedFiles.push(file[0]);
 				}
 			});
-			console.log(submittedFiles);
+
 			addFiles(submittedFiles);
+			setSubmitted(true);
 
 			exit();
 		}
@@ -56,8 +58,16 @@ const App = ({ name = "Stranger" }) => {
 
 	return (
 		<Box flexDirection="column">
+			<Box justifyContent="center" borderStyle="double">
+				<Text>Select Files to Add</Text>
+			</Box>
 			<FileList files={files} setFocused={setFocused} />
 			<Submit setFocused={setFocused} />
+			{isSubmitted && (
+				<Text backgroundColor="blue" bold>
+					Files Added
+				</Text>
+			)}
 		</Box>
 	);
 };
