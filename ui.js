@@ -25,6 +25,11 @@ const App = ({ name = "Stranger", all = false }) => {
 	// get files on first render
 	useEffect(() => {
 		let fileList = getStatus();
+
+		if (fileList === null) {
+			exit();
+		}
+
 		fileList = fileList.map((file) => [file, false]);
 
 		setFiles(fileList);
