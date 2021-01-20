@@ -13,7 +13,8 @@
 		"cli.js",
 		"ui.js",
 		"/components",
-		"actions"
+		"actions",
+		"styles.json"
 	],
 	"dependencies": {
 		"import-jsx": "^4.0.0",
