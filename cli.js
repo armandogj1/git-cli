@@ -9,10 +9,10 @@ const ui = importJsx("./ui");
 
 const cli = meow(`
 	Usage
-	  $ addy
+	  $ gty
 
 	Examples
-	  $ addy
+	  $ gty
 			[tab] to highlight the files to add
 			[return] to select the files
 			highlight ADD and hit return
