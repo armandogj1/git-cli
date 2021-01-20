@@ -1,7 +1,7 @@
 const React = require("react");
 const { useState, useEffect } = require("react");
 const { Text, Newline, Box, useFocus } = require("ink");
-const colors = require("../styles.json");
+const colors = require("./styles.json");
 
 const File = ({ file, idx, setFocused }) => {
 	const { isFocused } = useFocus();
