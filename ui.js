@@ -5,7 +5,7 @@ const { useEffect, useState } = require("react");
 const { Text, Box, useApp, useInput } = require("ink");
 const FileList = importJsx("./components/fileList.jsx");
 const Submit = importJsx("./components/submit.jsx");
-const colors = require("./styles.json");
+const colors = require("./components/styles.json");
 
 const getStatus = require("./actions/getStatus");
 const addFiles = require("./actions/addFiles");
