@@ -1,4 +1,4 @@
-# git-cli
+# addy
 
 A command line app to select files to add to a commit. Easier than typing the file names.
 
@@ -7,19 +7,19 @@ A command line app to select files to add to a commit. Easier than typing the fi
 ## Install
 
 ```bash
-$ npm install --global git-cli
+$ npm install --global addy
 ```
 
 ## CLI
 
 ```
-$ git-cli --help
+$ addy --help
 
   Usage
-    $ git-cli
+    $ addy
 
   Examples
-    $ git-cli --name=Jane
+    $ addy --name=Jane
       [tab] to highlight the files to add
 			[return] to select the files
 			highlight ADD and hit return

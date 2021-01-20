@@ -9,10 +9,10 @@ const ui = importJsx("./ui");
 
 const cli = meow(`
 	Usage
-	  $ git-cli
+	  $ addy
 
 	Examples
-	  $ git-cli
+	  $ addy
 			[tab] to highlight the files to add
 			[return] to select the files
 			highlight ADD and hit return
