@@ -11,6 +11,7 @@ const File = ({ file, idx, setFocused }) => {
 		setFocused(idx);
 	}
 
+	// return
 	return (
 		<Box key={`${file[0]}-${idx}`}>
 			{isFocused ? (

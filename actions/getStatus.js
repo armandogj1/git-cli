@@ -32,6 +32,7 @@ const getStatus = () => {
 		// console.log(files);
 		return files;
 	} catch (e) {
+		// return null if error
 		return null;
 	}
 };
